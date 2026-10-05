@@ -1,0 +1,13 @@
+# Never publish data: site packages contain patient-level CohortMethod files
+*.zip
+raw_data/
+data/
+*.rds
+*.ff
+*.ffData
+cmOutput/
+# R / editor artifacts
+.Rhistory
+.RData
+.Rproj.user/
+.vscode/

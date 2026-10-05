@@ -1,0 +1,2888 @@
+"outcome_id","outcome_name","definition"
+8077,"[jml] in-hospital_mortality","{
+  ""ExpressionLimit"": {""Type"": ""First""},
+  ""CollapseSettings"": {
+    ""CollapseType"": ""ERA"",
+    ""EraPad"": 0
+  },
+  ""CensorWindow"": {
+    ""StartDate"": null,
+    ""EndDate"": null
+  },
+  ""ConceptSets"": [],
+  ""EndStrategy"": {""DateOffset"": {
+    ""DateField"": ""StartDate"",
+    ""Offset"": 1
+  }},
+  ""cdmVersionRange"": "">=5.0.0"",
+  ""CensoringCriteria"": [],
+  ""QualifiedLimit"": {""Type"": ""First""},
+  ""InclusionRules"": [],
+  ""PrimaryCriteria"": {
+    ""CriteriaList"": [{""Death"": {
+      ""CorrelatedCriteria"": null,
+      ""CodesetId"": null,
+      ""DeathSourceConcept"": null,
+      ""DeathTypeExclude"": false,
+      ""DeathType"": null,
+      ""OccurrenceStartDate"": null,
+      ""Gender"": null,
+      ""Age"": null
+    }}],
+    ""PrimaryCriteriaLimit"": {""Type"": ""First""},
+    ""ObservationWindow"": {
+      ""PostDays"": 0,
+      ""PriorDays"": 0
+    }
+  }
+}"
+7639,"[jml] delirium","{
+  ""ExpressionLimit"": {""Type"": ""First""},
+  ""CollapseSettings"": {
+    ""CollapseType"": ""ERA"",
+    ""EraPad"": 0
+  },
+  ""CensorWindow"": {
+    ""StartDate"": null,
+    ""EndDate"": null
+  },
+  ""ConceptSets"": [
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 766529,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""5093"",
+            ""VOCABULARY_ID"": ""RxNorm"",
+            ""CONCEPT_NAME"": ""haloperidol"",
+            ""DOMAIN_ID"": ""Drug"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Ingredient"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": false
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 377830,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""8635005"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Alcohol withdrawal delirium"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": false
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 373995,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""2776000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Delirium"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 37111242,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""725898002"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Delirium co-occurrent with dementia"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 373449,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""191492000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Delirium caused by drug"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""[jml] Delirium"",
+      ""id"": 0
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 766529,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""5093"",
+            ""VOCABULARY_ID"": ""RxNorm"",
+            ""CONCEPT_NAME"": ""haloperidol"",
+            ""DOMAIN_ID"": ""Drug"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Ingredient"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 21604516,
+            ""STANDARD_CONCEPT"": ""C"",
+            ""CONCEPT_CODE"": ""N05AD01"",
+            ""VOCABULARY_ID"": ""ATC"",
+            ""CONCEPT_NAME"": ""haloperidol; systemic"",
+            ""DOMAIN_ID"": ""Drug"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Classification"",
+            ""CONCEPT_CLASS_ID"": ""ATC 5th"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""[jml] haldol - delirium"",
+      ""id"": 1
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 381273,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""286933003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Confusional state"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 373995,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""2776000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Delirium"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 373449,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""191492000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Delirium caused by drug"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 37111242,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""725898002"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Delirium co-occurrent with dementia"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4224115,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""404906000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Postoperative confusion"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 766529,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""5093"",
+            ""VOCABULARY_ID"": ""RxNorm"",
+            ""CONCEPT_NAME"": ""haloperidol"",
+            ""DOMAIN_ID"": ""Drug"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Ingredient"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""[jml] delirium"",
+      ""id"": 2
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4266202,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""400053006"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Amputation of limb"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4236706,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""405469008"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Arterial bypass of lower limb artery"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4024267,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""19578002"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Arthrodesis"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 2103512,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""22558"",
+            ""VOCABULARY_ID"": ""CPT4"",
+            ""CONCEPT_NAME"": ""Arthrodesis, anterior interbody technique, including minimal discectomy to prepare interspace (other than for decompression); lumbar"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""CPT4"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 40481840,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""442095009"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Arthroplasty"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 40482195,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""442117004"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Arthroplasty of temporomandibular joint"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4028987,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""13714004"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Arthroscopy"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4288878,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""69650005"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Arthroscopy of hip"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4205229,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""309431009"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Arthroscopy of knee"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4085220,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""281812007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Arthroscopy of shoulder"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 2106033,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""29879"",
+            ""VOCABULARY_ID"": ""CPT4"",
+            ""CONCEPT_NAME"": ""Arthroscopy, knee, surgical; abrasion arthroplasty (includes chondroplasty where necessary) or multiple drilling or microfracture"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""CPT4"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4119998,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""302495003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Arthrotomy"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4121436,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""288058001"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Bone reconstruction"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 37522127,
+            ""STANDARD_CONCEPT"": ""C"",
+            ""CONCEPT_CODE"": ""10050305"",
+            ""VOCABULARY_ID"": ""MedDRA"",
+            ""CONCEPT_NAME"": ""Cast application"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Classification"",
+            ""CONCEPT_CLASS_ID"": ""PT"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4272410,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""36777000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Debridement"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4057680,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""19697009"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Debridement and suture"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4150040,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""31064000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Debridement of skin and subcutaneous tissue"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 42872680,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""450671005"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Debridement of soft tissue"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4301752,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""78391005"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Debridement of subcutaneous tissue"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4311933,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""85875009"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Debridement of wound of skin"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4145274,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""3418002"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Discectomy of spine"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4108627,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""284400003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Examination of hip joint"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4111529,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""284393006"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Examination of joint"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4111534,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""284401004"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Examination of knee joint"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4108626,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""284396003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Examination of shoulder joint"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4041067,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""118455003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Exploration of joint"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4121859,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""257838009"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""External fixation of bone"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4143665,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""265706008"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Fixation of bone of face"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4343339,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""239279000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Fixation of fracture"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 40490415,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""448514006"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Fusion of joint of lumbar spine by anterior approach"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 36714117,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""719217005"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Interbody fusion of lumbar spine by anterior approach"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4343794,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""239293007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Internal fixation of fracture"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4041637,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""118470002"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Internal skeletal fixation"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4306206,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""387731002"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Laminectomy"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 40488920,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""448234006"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Laminectomy and discectomy"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4177164,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""50172003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Lumbar spinal fusion"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4002361,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""119572000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Musculoskeletal system closure"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4030641,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""107739004"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Musculoskeletal system endoscopy"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4227428,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""88395007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Neuroplasty of major peripheral nerve of arm"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4227108,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""40362001"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Neuroplasty of major peripheral nerve of leg"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 2104934,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""27254"",
+            ""VOCABULARY_ID"": ""CPT4"",
+            ""CONCEPT_NAME"": ""Open treatment of hip dislocation, traumatic, with acetabular wall and femoral head fracture, with or without internal or external fixation"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""CPT4"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4034458,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""239540005"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Operation on intervertebral disc"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4012907,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""112697007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Operation on musculoskeletal system"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": false
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4146214,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""35269008"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Osteoplasty"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4305752,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""150062003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Osteotomy"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4107326,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""257828004"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Percutaneous fixation of bone"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4186947,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""46779000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Peripheral neuroplasty"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4042330,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""118745001"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Procedure on joint"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4167829,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""4811009"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Reconstruction of diaphragm"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4321095,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""70805003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Reconstruction of joint"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 2006166,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""83.7"",
+            ""VOCABULARY_ID"": ""ICD9Proc"",
+            ""CONCEPT_NAME"": ""Reconstruction of muscle and tendon"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""3-dig nonbill code"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4072048,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""178203000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Reconstruction of tendon sheath"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4271046,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""63968000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Reconstructive orthopedic procedure"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4343790,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""239274005"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Release of contracture of sternomastoid muscle"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4086024,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""281951001"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Removal of external fixation"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4218109,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""72010008"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Removal of internal fixation device"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4294134,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""75579003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Repair of artery with vein graft of lower extremity"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4209151,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""56060000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Repair of musculotendinous cuff of shoulder"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4234819,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""405375003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Repair of popliteal artery"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4085723,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""281758003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Repair of tendon"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4078404,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""180048002"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Revision coverage of amputation stump"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 1073617,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""1306657008"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Revision of amputation stump"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4185115,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""4365001"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Surgical repair"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": false
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4091623,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""188383006"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Surgical repair of lower extremity"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 37310508,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""820511000168109"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Thyroplasty"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4001857,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""119605005"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Vertebral column reconstruction"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""[jml] orthopedic surgery"",
+      ""id"": 3
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4078547,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""19063003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Arthroplasty of knee"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4134857,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""398010007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Prosthetic arthroplasty of hip"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 43531648,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""609588000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Total knee replacement"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4203771,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""52734007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Total replacement of hip"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""[jml] tjr"",
+      ""id"": 4
+    }
+  ],
+  ""EndStrategy"": {""DateOffset"": {
+    ""DateField"": ""StartDate"",
+    ""Offset"": 1
+  }},
+  ""cdmVersionRange"": "">=5.0.0"",
+  ""CensoringCriteria"": [],
+  ""QualifiedLimit"": {""Type"": ""First""},
+  ""InclusionRules"": [],
+  ""PrimaryCriteria"": {
+    ""CriteriaList"": [
+      {""ConditionOccurrence"": {
+        ""OccurrenceEndDate"": null,
+        ""CorrelatedCriteria"": null,
+        ""ConditionTypeExclude"": false,
+        ""CodesetId"": 2,
+        ""ProviderSpecialty"": null,
+        ""Gender"": null,
+        ""VisitType"": null,
+        ""First"": null,
+        ""OccurrenceStartDate"": null,
+        ""ConditionType"": null,
+        ""ConditionSourceConcept"": null,
+        ""StopReason"": null,
+        ""Age"": null
+      }},
+      {""DrugExposure"": {
+        ""OccurrenceEndDate"": null,
+        ""CorrelatedCriteria"": null,
+        ""DrugSourceConcept"": null,
+        ""CodesetId"": 1,
+        ""DrugTypeExclude"": false,
+        ""Quantity"": null,
+        ""DrugType"": null,
+        ""ProviderSpecialty"": null,
+        ""EffectiveDrugDose"": null,
+        ""Gender"": null,
+        ""DaysSupply"": null,
+        ""DoseUnit"": null,
+        ""VisitType"": null,
+        ""Refills"": null,
+        ""First"": null,
+        ""OccurrenceStartDate"": null,
+        ""RouteConcept"": null,
+        ""StopReason"": null,
+        ""LotNumber"": null,
+        ""Age"": null
+      }}
+    ],
+    ""PrimaryCriteriaLimit"": {""Type"": ""All""},
+    ""ObservationWindow"": {
+      ""PostDays"": 0,
+      ""PriorDays"": 0
+    }
+  }
+}"
+7761,"[jml] pneumonia","{
+  ""ExpressionLimit"": {""Type"": ""First""},
+  ""CollapseSettings"": {
+    ""CollapseType"": ""ERA"",
+    ""EraPad"": 0
+  },
+  ""CensorWindow"": {
+    ""StartDate"": null,
+    ""EndDate"": null
+  },
+  ""ConceptSets"": [
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 42600379,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""45431000009102"",
+            ""VOCABULARY_ID"": ""SNOMED Veterinary"",
+            ""CONCEPT_NAME"": ""ARDs - Acute respiratory distress syndrome"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Clinical Finding"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 43531681,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""651000119108"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Acute deep vein thrombosis of lower limb"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 255848,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""233604007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Pneumonia"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4309333,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""213220000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Postoperative deep vein thrombosis"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4121618,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""233935004"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Pulmonary thromboembolism"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4256228,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""409622000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Respiratory failure"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""[team 5] postop pulmonary complication"",
+      ""id"": 0
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 42600379,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""45431000009102"",
+            ""VOCABULARY_ID"": ""SNOMED Veterinary"",
+            ""CONCEPT_NAME"": ""ARDs - Acute respiratory distress syndrome"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Clinical Finding"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 43531681,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""651000119108"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Acute deep vein thrombosis of lower limb"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 255848,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""233604007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Pneumonia"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4309333,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""213220000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Postoperative deep vein thrombosis"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 440417,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""59282003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Pulmonary embolism"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4121618,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""233935004"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Pulmonary thromboembolism"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4256228,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""409622000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Respiratory failure"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""[team 5] postop pulmonary complication"",
+      ""id"": 1
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 42600379,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""45431000009102"",
+            ""VOCABULARY_ID"": ""SNOMED Veterinary"",
+            ""CONCEPT_NAME"": ""ARDs - Acute respiratory distress syndrome"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Clinical Finding"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 43531681,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""651000119108"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Acute deep vein thrombosis of lower limb"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": false
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 255848,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""233604007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Pneumonia"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4309333,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""213220000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Postoperative deep vein thrombosis"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": false
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 440417,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""59282003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Pulmonary embolism"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4121618,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""233935004"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Pulmonary thromboembolism"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4256228,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""409622000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Respiratory failure"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""[jml] pulmonary complications"",
+      ""id"": 2
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 42600379,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""45431000009102"",
+            ""VOCABULARY_ID"": ""SNOMED Veterinary"",
+            ""CONCEPT_NAME"": ""ARDs - Acute respiratory distress syndrome"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Clinical Finding"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 255848,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""233604007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Pneumonia"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4256228,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""409622000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Respiratory failure"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""[jml] pneumonia, ards, respiratory failure"",
+      ""id"": 3
+    }
+  ],
+  ""EndStrategy"": {""DateOffset"": {
+    ""DateField"": ""StartDate"",
+    ""Offset"": 1
+  }},
+  ""cdmVersionRange"": "">=5.0.0"",
+  ""CensoringCriteria"": [],
+  ""QualifiedLimit"": {""Type"": ""First""},
+  ""InclusionRules"": [],
+  ""PrimaryCriteria"": {
+    ""CriteriaList"": [{""ConditionOccurrence"": {
+      ""OccurrenceEndDate"": null,
+      ""CorrelatedCriteria"": null,
+      ""ConditionTypeExclude"": false,
+      ""CodesetId"": 3,
+      ""ProviderSpecialty"": null,
+      ""Gender"": null,
+      ""VisitType"": null,
+      ""First"": null,
+      ""OccurrenceStartDate"": null,
+      ""ConditionType"": null,
+      ""ConditionSourceConcept"": null,
+      ""StopReason"": null,
+      ""Age"": null
+    }}],
+    ""PrimaryCriteriaLimit"": {""Type"": ""All""},
+    ""ObservationWindow"": {
+      ""PostDays"": 0,
+      ""PriorDays"": 0
+    }
+  }
+}"
+7739,"[jml] pte/dvt","{
+  ""ExpressionLimit"": {""Type"": ""First""},
+  ""CollapseSettings"": {
+    ""CollapseType"": ""ERA"",
+    ""EraPad"": 0
+  },
+  ""CensorWindow"": {
+    ""StartDate"": null,
+    ""EndDate"": null
+  },
+  ""ConceptSets"": [
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 43531681,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""651000119108"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Acute deep vein thrombosis of lower limb"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4309333,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""213220000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Postoperative deep vein thrombosis"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""[jml] dvt"",
+      ""id"": 0
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 440417,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""59282003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Pulmonary embolism"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4121618,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""233935004"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Pulmonary thromboembolism"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""[jml] pulmonary embolism"",
+      ""id"": 1
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4287926,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""397913009"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Percutaneous insertion of inferior vena cava filter"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4161134,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""432947000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Percutaneous thrombectomy using fluoroscopic guidance"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4291474,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""37499001"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Thrombectomy of abdominal artery"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4319269,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""22276002"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Thrombectomy of abdominal vein"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4287324,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""397046001"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Thrombectomy of artery"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4278676,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""65975002"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Thrombectomy of head and neck artery"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4051160,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""233422002"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Thrombectomy of intracranial vein"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4287321,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""397028007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Thrombectomy of vein"",
+            ""DOMAIN_ID"": ""Procedure"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Procedure"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 1367571,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""5224"",
+            ""VOCABULARY_ID"": ""RxNorm"",
+            ""CONCEPT_NAME"": ""heparin"",
+            ""DOMAIN_ID"": ""Drug"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Ingredient"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""[jml] heparin (proxy for pte)"",
+      ""id"": 2
+    },
+    {
+      ""expression"": {""items"": [{
+        ""isExcluded"": false,
+        ""concept"": {
+          ""INVALID_REASON_CAPTION"": ""Valid"",
+          ""CONCEPT_ID"": 4145380,
+          ""STANDARD_CONCEPT"": ""S"",
+          ""CONCEPT_CODE"": ""426730003"",
+          ""VOCABULARY_ID"": ""SNOMED"",
+          ""CONCEPT_NAME"": ""CT angiography of thorax with contrast"",
+          ""DOMAIN_ID"": ""Procedure"",
+          ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+          ""CONCEPT_CLASS_ID"": ""Procedure"",
+          ""INVALID_REASON"": ""V""
+        },
+        ""includeMapped"": false,
+        ""includeDescendants"": true
+      }]},
+      ""name"": ""[jml] ct pulmonary angiography"",
+      ""id"": 4
+    }
+  ],
+  ""EndStrategy"": {""DateOffset"": {
+    ""DateField"": ""StartDate"",
+    ""Offset"": 1
+  }},
+  ""cdmVersionRange"": "">=5.0.0"",
+  ""CensoringCriteria"": [],
+  ""QualifiedLimit"": {""Type"": ""First""},
+  ""InclusionRules"": [],
+  ""PrimaryCriteria"": {
+    ""CriteriaList"": [
+      {""ConditionOccurrence"": {
+        ""OccurrenceEndDate"": null,
+        ""CorrelatedCriteria"": null,
+        ""ConditionTypeExclude"": false,
+        ""CodesetId"": 1,
+        ""ProviderSpecialty"": null,
+        ""Gender"": null,
+        ""VisitType"": null,
+        ""First"": null,
+        ""OccurrenceStartDate"": null,
+        ""ConditionType"": null,
+        ""ConditionSourceConcept"": null,
+        ""StopReason"": null,
+        ""Age"": null
+      }},
+      {""ConditionOccurrence"": {
+        ""OccurrenceEndDate"": null,
+        ""CorrelatedCriteria"": null,
+        ""ConditionTypeExclude"": false,
+        ""CodesetId"": 0,
+        ""ProviderSpecialty"": null,
+        ""Gender"": null,
+        ""VisitType"": null,
+        ""First"": null,
+        ""OccurrenceStartDate"": null,
+        ""ConditionType"": null,
+        ""ConditionSourceConcept"": null,
+        ""StopReason"": null,
+        ""Age"": null
+      }},
+      {""ProcedureOccurrence"": {
+        ""ProcedureType"": null,
+        ""CorrelatedCriteria"": {
+          ""CriteriaList"": [{
+            ""RestrictVisit"": true,
+            ""StartWindow"": {
+              ""UseEventEnd"": false,
+              ""Start"": {
+                ""Days"": 7,
+                ""Coeff"": -1
+              },
+              ""End"": {
+                ""Days"": 0,
+                ""Coeff"": 1
+              },
+              ""UseIndexEnd"": false
+            },
+            ""IgnoreObservationPeriod"": false,
+            ""EndWindow"": null,
+            ""Criteria"": {""ProcedureOccurrence"": {
+              ""ProcedureType"": null,
+              ""CorrelatedCriteria"": null,
+              ""CodesetId"": 4,
+              ""ProcedureSourceConcept"": null,
+              ""Quantity"": null,
+              ""ProviderSpecialty"": null,
+              ""Gender"": null,
+              ""ProcedureTypeExclude"": false,
+              ""VisitType"": null,
+              ""First"": null,
+              ""OccurrenceStartDate"": null,
+              ""Modifier"": null,
+              ""Age"": null
+            }},
+            ""Occurrence"": {
+              ""Type"": 2,
+              ""IsDistinct"": false,
+              ""Count"": 1
+            }
+          }],
+          ""Type"": ""ALL"",
+          ""DemographicCriteriaList"": [],
+          ""Groups"": [],
+          ""Count"": null
+        },
+        ""CodesetId"": 2,
+        ""ProcedureSourceConcept"": null,
+        ""Quantity"": null,
+        ""ProviderSpecialty"": null,
+        ""Gender"": null,
+        ""ProcedureTypeExclude"": false,
+        ""VisitType"": null,
+        ""First"": null,
+        ""OccurrenceStartDate"": null,
+        ""Modifier"": null,
+        ""Age"": null
+      }},
+      {""DrugExposure"": {
+        ""OccurrenceEndDate"": null,
+        ""CorrelatedCriteria"": {
+          ""CriteriaList"": [{
+            ""RestrictVisit"": true,
+            ""StartWindow"": {
+              ""UseEventEnd"": false,
+              ""Start"": {
+                ""Days"": 7,
+                ""Coeff"": -1
+              },
+              ""End"": {
+                ""Days"": 0,
+                ""Coeff"": 1
+              },
+              ""UseIndexEnd"": false
+            },
+            ""IgnoreObservationPeriod"": false,
+            ""EndWindow"": null,
+            ""Criteria"": {""ProcedureOccurrence"": {
+              ""ProcedureType"": null,
+              ""CorrelatedCriteria"": null,
+              ""CodesetId"": 4,
+              ""ProcedureSourceConcept"": null,
+              ""Quantity"": null,
+              ""ProviderSpecialty"": null,
+              ""Gender"": null,
+              ""ProcedureTypeExclude"": false,
+              ""VisitType"": null,
+              ""First"": null,
+              ""OccurrenceStartDate"": null,
+              ""Modifier"": null,
+              ""Age"": null
+            }},
+            ""Occurrence"": {
+              ""Type"": 2,
+              ""IsDistinct"": false,
+              ""Count"": 1
+            }
+          }],
+          ""Type"": ""ALL"",
+          ""DemographicCriteriaList"": [],
+          ""Groups"": [],
+          ""Count"": null
+        },
+        ""DrugSourceConcept"": null,
+        ""CodesetId"": 2,
+        ""DrugTypeExclude"": false,
+        ""Quantity"": null,
+        ""DrugType"": null,
+        ""ProviderSpecialty"": null,
+        ""EffectiveDrugDose"": null,
+        ""Gender"": null,
+        ""DaysSupply"": null,
+        ""DoseUnit"": null,
+        ""VisitType"": null,
+        ""Refills"": null,
+        ""First"": null,
+        ""OccurrenceStartDate"": null,
+        ""RouteConcept"": null,
+        ""StopReason"": null,
+        ""LotNumber"": null,
+        ""Age"": null
+      }}
+    ],
+    ""PrimaryCriteriaLimit"": {""Type"": ""All""},
+    ""ObservationWindow"": {
+      ""PostDays"": 0,
+      ""PriorDays"": 0
+    }
+  }
+}"
+7996,"[jml] 3-point mace","{
+  ""ExpressionLimit"": {""Type"": ""All""},
+  ""CollapseSettings"": {
+    ""CollapseType"": ""ERA"",
+    ""EraPad"": 180
+  },
+  ""CensorWindow"": {
+    ""StartDate"": null,
+    ""EndDate"": null
+  },
+  ""ConceptSets"": [
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4329847,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""22298006"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Myocardial infarction"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 314666,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""1755008"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Old myocardial infarction"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""Acute myocardial infarction"",
+      ""id"": 0
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4048809,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""230802007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Brainstem death"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 321042,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""410429000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Cardiac arrest"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 442289,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""53559009"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Death in less than 24 hours from onset of symptoms"",
+            ""DOMAIN_ID"": ""Observation"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Event"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4317150,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""95281009"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Sudden cardiac death"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4132309,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""26636000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Sudden death"",
+            ""DOMAIN_ID"": ""Observation"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Event"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 437894,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""71908006"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Ventricular fibrillation"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""Sudden cardiac death"",
+      ""id"": 3
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 372924,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""20059004"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Cerebral artery occlusion"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 375557,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""75543006"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Cerebral embolism"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 443454,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""432504007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Cerebral infarction"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 441874,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""71444005"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Cerebral thrombosis"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""Ischemic stroke"",
+      ""id"": 4
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 376713,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""274100004"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Cerebral hemorrhage"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 432923,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""21454007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Subarachnoid hemorrhage"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 43530727,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""291571000119106"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Spontaneous cerebral hemorrhage"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 4148906,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""270907008"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Spontaneous subarachnoid hemorrhage"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 439847,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""1386000"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Intracranial hemorrhage"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""Intracranial bleed hemorrhagic stroke"",
+      ""id"": 5
+    },
+    {
+      ""expression"": {""items"": [
+        {
+          ""isExcluded"": true,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 315295,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""82523003"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Congestive rheumatic heart failure"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        },
+        {
+          ""isExcluded"": false,
+          ""concept"": {
+            ""INVALID_REASON_CAPTION"": ""Valid"",
+            ""CONCEPT_ID"": 316139,
+            ""STANDARD_CONCEPT"": ""S"",
+            ""CONCEPT_CODE"": ""84114007"",
+            ""VOCABULARY_ID"": ""SNOMED"",
+            ""CONCEPT_NAME"": ""Heart failure"",
+            ""DOMAIN_ID"": ""Condition"",
+            ""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+            ""CONCEPT_CLASS_ID"": ""Disorder"",
+            ""INVALID_REASON"": ""V""
+          },
+          ""includeMapped"": false,
+          ""includeDescendants"": true
+        }
+      ]},
+      ""name"": ""Heart failure"",
+      ""id"": 6
+    }
+  ],
+  ""EndStrategy"": {""DateOffset"": {
+    ""DateField"": ""StartDate"",
+    ""Offset"": 1
+  }},
+  ""cdmVersionRange"": "">=5.0.0"",
+  ""CensoringCriteria"": [],
+  ""QualifiedLimit"": {""Type"": ""First""},
+  ""InclusionRules"": [],
+  ""PrimaryCriteria"": {
+    ""CriteriaList"": [
+      {""ConditionOccurrence"": {
+        ""OccurrenceEndDate"": null,
+        ""CorrelatedCriteria"": null,
+        ""ConditionTypeExclude"": false,
+        ""CodesetId"": 0,
+        ""ProviderSpecialty"": null,
+        ""Gender"": null,
+        ""VisitType"": null,
+        ""First"": null,
+        ""OccurrenceStartDate"": null,
+        ""ConditionType"": null,
+        ""ConditionSourceConcept"": null,
+        ""StopReason"": null,
+        ""Age"": null
+      }},
+      {""ConditionOccurrence"": {
+        ""OccurrenceEndDate"": null,
+        ""CorrelatedCriteria"": null,
+        ""ConditionTypeExclude"": false,
+        ""CodesetId"": 4,
+        ""ProviderSpecialty"": null,
+        ""Gender"": null,
+        ""VisitType"": null,
+        ""First"": null,
+        ""OccurrenceStartDate"": null,
+        ""ConditionType"": null,
+        ""ConditionSourceConcept"": null,
+        ""StopReason"": null,
+        ""Age"": null
+      }},
+      {""ConditionOccurrence"": {
+        ""OccurrenceEndDate"": null,
+        ""CorrelatedCriteria"": null,
+        ""ConditionTypeExclude"": false,
+        ""CodesetId"": 5,
+        ""ProviderSpecialty"": null,
+        ""Gender"": null,
+        ""VisitType"": null,
+        ""First"": null,
+        ""OccurrenceStartDate"": null,
+        ""ConditionType"": null,
+        ""ConditionSourceConcept"": null,
+        ""StopReason"": null,
+        ""Age"": null
+      }},
+      {""ConditionOccurrence"": {
+        ""OccurrenceEndDate"": null,
+        ""CorrelatedCriteria"": null,
+        ""ConditionTypeExclude"": false,
+        ""CodesetId"": 6,
+        ""ProviderSpecialty"": null,
+        ""Gender"": null,
+        ""VisitType"": null,
+        ""First"": null,
+        ""OccurrenceStartDate"": null,
+        ""ConditionType"": null,
+        ""ConditionSourceConcept"": null,
+        ""StopReason"": null,
+        ""Age"": null
+      }}
+    ],
+    ""PrimaryCriteriaLimit"": {""Type"": ""All""},
+    ""ObservationWindow"": {
+      ""PostDays"": 0,
+      ""PriorDays"": 0
+    }
+  }
+}"
