@@ -34,12 +34,15 @@ R/02_meta_analysis.R         random-effects pooling, sensitivity, leave-one-out
 R/03_table1.R                pooled baseline characteristics (Table 1)
 R/04_figures.R               flow diagram, forest plots, PS and balance figures
 R/05_summary_numbers.R       numbers quoted in the manuscript
+R/06_build_manuscript.R      fill manuscript templates with current results
+R/07_supplement_tables.R     supplementary eTables
+R/fetch_references.R         AMA references from DOIs (Crossref)
 study_specification/         ATLAS cohort JSON and CohortMethod settings
 ```
 
 ## Running
 
-Requirements: R ≥ 4.3 with `dplyr tidyr purrr stringr ggplot2 meta officer flextable patchwork scales`.
+Requirements: R ≥ 4.3 with `dplyr tidyr purrr stringr ggplot2 meta officer flextable patchwork scales httr2`.
 
 ```r
 # working directory = this folder

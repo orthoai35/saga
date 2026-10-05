@@ -84,5 +84,35 @@ lines <- c(lines, "## Leave-one-site-out (main IPTW)",
            sprintf("- %s: pooled HR range %.2f-%.2f; any CI crossing 1: %s",
                    loo_rng$outcome, loo_rng$min_hr, loo_rng$max_hr, loo_rng$any_ns))
 
+# ---- Site characteristics (eTable) -------------------------------------------------
+source("R/01_read_results.R")
+expo <- read_all_sites("exposure_summary") |>
+  filter(exposure_id %in% c(8045, 8047)) |>
+  group_by(site) |>
+  summarise(first_index = min(as.Date(min_date)), last_index = max(as.Date(max_date)),
+            .groups = "drop")
+site_n <- read_all_sites("attrition") |>
+  filter(target_id == 8045, comparator_id == 8047, outcome_id == 8077,
+         analysis_id == analysis_id_for("IPTW", 60)) |>
+  mutate(arm = ifelse(exposure_id == 8045, "spinal", "general"),
+         step = ifelse(sequence_number == 1, "eligible",
+                       ifelse(grepl("equipoise", description), "analyzed", NA))) |>
+  filter(!is.na(step)) |>
+  select(site, arm, step, subjects) |>
+  pivot_wider(names_from = c(arm, step), values_from = subjects)
+site_tab <- expo |> inner_join(site_n, by = "site") |>
+  mutate(name = SITE_NAMES[site],
+         in_main_analysis = !site %in% EXCLUDE_SITES_MAIN) |>
+  select(site, name, first_index, last_index, spinal_eligible, general_eligible,
+         spinal_analyzed, general_analyzed, in_main_analysis)
+write.csv(site_tab, file.path(TABLE_DIR, "etable_sites.csv"), row.names = FALSE)
+lines <- c(lines, "", "## Sites",
+           sprintf("- Index dates across sites: %s to %s",
+                   min(site_tab$first_index), max(site_tab$last_index)),
+           sprintf("- %s: %s-%s; eligible SA %s / GA %s; analyzed SA %s / GA %s",
+                   site_tab$site, site_tab$first_index, site_tab$last_index,
+                   site_tab$spinal_eligible, site_tab$general_eligible,
+                   site_tab$spinal_analyzed, site_tab$general_analyzed))
+
 writeLines(lines, file.path(TABLE_DIR, "manuscript_numbers.md"), useBytes = TRUE)
 message("05_summary_numbers.R done -> manuscript/tables/manuscript_numbers.md")

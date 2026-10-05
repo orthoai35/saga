@@ -15,4 +15,6 @@ source("R/02_meta_analysis.R")   # pooled HRs, site estimates, leave-one-out
 source("R/03_table1.R")          # baseline characteristics
 source("R/04_figures.R")         # figures
 source("R/05_summary_numbers.R") # numbers quoted in the manuscript text
+source("R/06_build_manuscript.R") # fill manuscript templates (if present) -> .docx
+source("R/07_supplement_tables.R") # supplementary eTables
 message(sprintf("All done in %.1f min.", as.numeric(difftime(Sys.time(), t0, units = "mins"))))

@@ -43,8 +43,18 @@ CONDITIONS <- tibble::tribble(
   4182210,  "Dementia",
   373995,   "Delirium (prior)",
   440383,   "Depressive disorder",
-  381270,   "Parkinson disease"
+  381270,   "Parkinson disease",
+  433753,   "Harmful alcohol use"
 ) |> mutate(covariate_id = concept_id * 1000 + 209)
+
+# Pre-specified procedures (procedure occurrence any time before index)
+PROCEDURES <- tibble::tribble(
+  ~concept_id, ~label,
+  4032243,  "Dialysis"
+) |> mutate(covariate_id = concept_id * 1000 + 501)
+# Coronary procedure (4043174), lumbar fusion (4177164) and transfusion
+# (4182536) were in the concept list but no covariate with those exact concept
+# IDs was exported (procedure covariates are not rolled up to parents).
 
 AGE_GROUPS <- tibble(covariate_id = (10:19) * 1000 + 3) |>
   mutate(lower = (covariate_id %/% 1000) * 5,
@@ -125,25 +135,52 @@ make_table1 <- function(comp) {
            n_t_after = sum(p$t_after), n_c_after = sum(p$c_after), masked = any(p$masked))
   }
 
+  present <- function(ids) any(ids %in% bal$covariate_id)
+  # Binary covariates that exist only in some analysis versions (sex, device,
+  # measurement were added in the re-run); rows appear when they are exported.
+  OPTIONAL <- tibble::tribble(
+    ~covariate_id,   ~label,                         ~group,
+    8532001,         "Female",                        "Sex",
+    4030875601,      "Cardiac pacemaker",             "Other",
+    3038553701,      "Body mass index recorded",      "Other")
+  optional_rows <- OPTIONAL |> filter(map_lgl(covariate_id, present))
+  # Measurement range-group covariates (FeatureExtraction analyses 757-760:
+  # below / within / above normal range), labelled from the exported names
+  mrg <- load_covariate_names(SITES_TABLE1) |>
+    filter(covariate_analysis_id %in% 757:760, covariate_id %in% bal$covariate_id) |>
+    distinct(covariate_id, .keep_all = TRUE) |>
+    transmute(covariate_id,
+              label = sub("^measurement[^:]*: ", "", covariate_name), group = "Other")
+  optional_rows <- bind_rows(optional_rows, mrg)
+
   rows <- bind_rows(
-    map_dfr(unique(AGE_GROUPS$label), function(g)
-      row_for(AGE_GROUPS$covariate_id[AGE_GROUPS$label == g], g, "Age group, y")),
+    if (present(AGE_GROUPS$covariate_id))
+      map_dfr(unique(AGE_GROUPS$label), function(g)
+        row_for(AGE_GROUPS$covariate_id[AGE_GROUPS$label == g], g, "Age group, y")),
+    pmap_dfr(optional_rows, function(covariate_id, label, group) row_for(covariate_id, label, group)),
     map_dfr(unique(YEAR_GROUPS$label), function(g)
       row_for(YEAR_GROUPS$covariate_id[YEAR_GROUPS$label == g], g, "Index year")),
     map2_dfr(CONDITIONS$covariate_id, CONDITIONS$label,
-             function(id, lab) row_for(id, lab, "Comorbidities"))
+             function(id, lab) row_for(id, lab, "Comorbidities")),
+    map2_dfr(PROCEDURES$covariate_id, PROCEDURES$label,
+             function(id, lab) row_for(id, lab, "Prior procedures"))
   )
 
-  # Charlson index: continuous; pooled mean and N-weighted site SMD
-  ch <- bal |> filter(covariate_id == 1901) |> inner_join(n, by = "site")
-  charlson <- tibble(
-    group = "Comorbidity burden", label = "Charlson comorbidity index, mean",
-    t_before = sum(ch$target_mean_before * ch$t_before) / sum(ch$t_before),
-    c_before = sum(ch$comparator_mean_before * ch$c_before) / sum(ch$c_before),
-    smd_before = weighted.mean(ch$std_diff_before, ch$t_before + ch$c_before),
-    t_after = sum(ch$target_mean_after * ch$t_after) / sum(ch$t_after),
-    c_after = sum(ch$comparator_mean_after * ch$c_after) / sum(ch$c_after),
-    smd_after = weighted.mean(ch$std_diff_after, ch$t_after + ch$c_after))
+  # Continuous covariates (age in years, Charlson index): pooled mean and
+  # N-weighted average of the site SMDs (site SDs are not exported)
+  cont_row <- function(id, label) {
+    ch <- bal |> filter(covariate_id == id) |> inner_join(n, by = "site")
+    if (nrow(ch) == 0) return(NULL)
+    tibble(group = "Continuous", label = label,
+      t_before = sum(ch$target_mean_before * ch$t_before) / sum(ch$t_before),
+      c_before = sum(ch$comparator_mean_before * ch$c_before) / sum(ch$c_before),
+      smd_before = weighted.mean(ch$std_diff_before, ch$t_before + ch$c_before),
+      t_after = sum(ch$target_mean_after * ch$t_after) / sum(ch$t_after),
+      c_after = sum(ch$comparator_mean_after * ch$c_after) / sum(ch$c_after),
+      smd_after = weighted.mean(ch$std_diff_after, ch$t_after + ch$c_after))
+  }
+  charlson <- bind_rows(cont_row(1002, "Age, mean, y"),
+                        cont_row(1901, "Charlson comorbidity index, mean"))
 
   # Medications: every pre-specified ingredient (drug group era, analysis 409)
   meds_ids <- bal |> filter(covariate_id %% 1000 == 409) |> distinct(covariate_id)
@@ -169,7 +206,7 @@ fmt_n_pct <- function(p, n) {
 
 build_docx <- function(t1, comp_label, file, top_meds = 12) {
   r <- t1$rows
-  fmt_rows <- function(r) tibble(
+  fmt_rows <- function(r) if (nrow(r) == 0) NULL else tibble(
     Characteristic = ifelse(r$masked, paste0(r$label, "†"), r$label),
     `SA before` = fmt_n_pct(r$t_before, t1$n_tot["tb"]),
     `GA before` = fmt_n_pct(r$c_before, t1$n_tot["cb"]),
@@ -187,20 +224,24 @@ build_docx <- function(t1, comp_label, file, top_meds = 12) {
            `GA before` = format(t1$n_tot["cb"], big.mark = ","), `SMD before` = "",
            `SA after` = format(t1$n_tot["ta"], big.mark = ","),
            `GA after` = format(t1$n_tot["ca"], big.mark = ","), `SMD after` = ""),
-    head_row("Age group, y, No. (%)"), fmt_rows(filter(r, group == "Age group, y")),
-    head_row("Index year, No. (%)"), fmt_rows(filter(r, group == "Index year")),
-    tibble(Characteristic = "Charlson comorbidity index, mean",
+    tibble(Characteristic = ch$label,
            `SA before` = sprintf("%.2f", ch$t_before), `GA before` = sprintf("%.2f", ch$c_before),
            `SMD before` = sprintf("%.3f", abs(ch$smd_before)),
            `SA after` = sprintf("%.2f", ch$t_after), `GA after` = sprintf("%.2f", ch$c_after),
            `SMD after` = sprintf("%.3f", abs(ch$smd_after))),
+    if (any(r$group == "Age group, y"))
+      bind_rows(head_row("Age group, y, No. (%)"), fmt_rows(filter(r, group == "Age group, y"))),
+    fmt_rows(filter(r, group == "Sex") |> mutate(label = paste0(label, ", No. (%)"))),
+    head_row("Index year, No. (%)"), fmt_rows(filter(r, group == "Index year")),
     head_row("Comorbidities, No. (%)"), fmt_rows(filter(r, group == "Comorbidities")),
+    head_row("Prior procedures and devices, No. (%)"),
+    fmt_rows(filter(r, group %in% c("Prior procedures", "Other"))),
     head_row("Prior medications (selected), No. (%)"),
     fmt_rows(t1$meds |> filter(label %in% TABLE1_MEDS) |>
                mutate(label = str_to_sentence(label)))
   )
-  indent_rows <- which(!body$Characteristic %in% c("No. of patients",
-                        "Charlson comorbidity index, mean") & body$`SA before` != "")
+  indent_rows <- which(!body$Characteristic %in% c("No. of patients", ch$label) &
+                         !grepl("^Female", body$Characteristic) & body$`SA before` != "")
   ft <- flextable(body) |>
     set_header_labels(`SA before` = "Spinal", `GA before` = "General", `SMD before` = "SMD",
                       `SA after` = "Spinal, %", `GA after` = "General, %", `SMD after` = "SMD") |>
