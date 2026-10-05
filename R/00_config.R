@@ -55,7 +55,7 @@ SITE_NAMES <- c(
   HUMC  = "Hallym University Medical Center",          # to be confirmed
   ISH   = "International St. Mary's Hospital",
   KCCH  = "Korea Cancer Center Hospital",               # to be confirmed
-  KDH   = "Kangdong Sacred Heart Hospital",
+  KDH   = "Kyung Hee University Hospital at Gangdong",
   KHMC  = "Kyung Hee University Medical Center",
   KWMC  = "Kangwon National University Hospital",
   KYUH  = "Konyang University Hospital",
